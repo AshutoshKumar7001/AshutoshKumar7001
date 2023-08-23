@@ -5,5 +5,6 @@ from .views import Another
 urlpatterns = [
     path('', views.home),
     path('p1/', views.page1),
-    path('p2/', Another.as_view())
+    path('p2/', Another.as_view()),
+    path('htmlpage/', views.htmlhome),
 ]

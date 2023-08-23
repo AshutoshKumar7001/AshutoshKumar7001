@@ -4,10 +4,13 @@ from django.views import View
 from .models import Book
 
 # Create your views here.
+books = Book.objects.all()
 
+def htmlhome(request):
+    return render(request, 'home.html', {'books': books})
 class Another(View):
 
-    books = Book.objects.all()
+    
 
     # output = f"We have {len(book)} that many books in DB."
     output = ''
